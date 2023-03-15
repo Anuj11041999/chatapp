@@ -26,6 +26,7 @@
       <li class="list-group-item">Item 2</li>
       <li class="list-group-item">Item 3</li>
       <li class="list-group-item">Item 4</li>
+      <li>Item 5</li>
     </ul>
    </div>
   </div>
@@ -34,11 +35,17 @@
 <script>
     var header = document.getElementById("header-title");
     header.style.borderBottom = "solid 3px black";
-    var addItem = document.getElementsByClassName("list-group-item");
-    addItem[2].style.backgroundColor = "green";
+    //var addItem = document.getElementsByClassName("list-group-item");
+    //addItem[2].style.backgroundColor = "green";
+    
+    //for(let i=0;i<addItem.length;i++){
+      //  addItem[i].style.fontWeight = "bold";
+    //}
+    var li = document.getElementsByTagName("li");
+    li[1].style.backgroundColor = "green";
     
     for(let i=0;i<addItem.length;i++){
-        addItem[i].style.fontWeight = "bold";
+        li[i].style.fontWeight = "bold";
     }
     
 </script>
