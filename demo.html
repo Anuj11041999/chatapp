@@ -34,9 +34,12 @@
 <script>
     var header = document.getElementById("header-title");
     header.style.borderBottom = "solid 3px black";
-    var addItem = document.getElementsByClassName("title");
-    addItem[0].style.color = "yellow";
-    addItem[0].innerHTML = "<h2><b>Add Items</h2>";
+    var addItem = document.getElementsByClassName("list-group-item");
+    addItem[2].style.backgroundColor = "yellow";
+    
+    for(let i=0;i<addItem.length;i++){
+        addItem[i].style.fontWeight = "bold";
+    }
     
 </script>
 </html>
