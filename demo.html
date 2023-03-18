@@ -54,11 +54,34 @@
     //thirditem.style.visibility = "hidden";
     
     // document.querySelectorAll exercise
-    var li = document.querySelectorAll("li")
-    li[1].style.color = "green";
-    var odd = document.querySelectorAll("li:nth-child(odd");
-    for(let i=0;i<odd.length;i++){
-        odd[i].style.backgroundColor = "green";
-    }
+    //var li = document.querySelectorAll("li")
+    //li[1].style.color = "green";
+    //var odd = document.querySelectorAll("li:nth-child(odd");
+    //for(let i=0;i<odd.length;i++){
+      //  odd[i].style.backgroundColor = "green";
+    //}
+
+    var newdiv = document.createElement('div');
+    newdiv.className = 'hello';
+    newdiv.id = 'hello1';
+    console.log(newdiv)
+    newdiv.setAttribute('title','Hello world');
+    var newDivText = document.createTextNode('Hello World');
+    newdiv.appendChild(newDivText);
+    var container = document.querySelector('header .container');
+    var h1 = document.querySelector('header h1');
+    
+    container.insertBefore(newdiv,h1);
+
+    var newEle = document.createElement('l1')
+    newEle.className = 'l1'
+    console.log(newEle)
+    newEle.setAttribute('title','Hello world');
+    var newEleText = document.createTextNode('Hello World');
+    newEle.appendChild(newEleText);
+    var container = document.querySelector('.list-group');
+    var l1 = document.querySelector('li');
+    container.insertBefore(newEle,l1)
+
 </script>
 </html>
