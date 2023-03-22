@@ -29,6 +29,7 @@ function onSubmit(e) {
 
     // Append to ul
     userList.appendChild(li);
+    localStorage.setItem()
 
     // Clear fields
     nameInput.value = '';
