@@ -12,7 +12,9 @@
   ul {
     list-style: none;
   }
-  
+  input{
+    margin:5px;
+  }
   ul li {
     padding: 5px;
     background: #f4f4f4;
@@ -66,3 +68,4 @@
     padding: 5px;
     margin: 5px;
   }
+  
