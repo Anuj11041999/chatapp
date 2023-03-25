@@ -51,6 +51,7 @@
             
             showNewUserOnScreen();
         }
+
         function showNewUserOnScreen(){
             var itemList = document.getElementById('users');
             axios.get("https://crudcrud.com/api/d842fed688bd4dd89571f20e13fa4743/data")
@@ -72,13 +73,19 @@
                         var deleteBtn = document.createElement('button');
                         deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
                         deleteBtn.appendChild(document.createTextNode('delete'));
-                        
+                        deleteBtn.addEventListener('click',deleteChild(d._id))
                         li.appendChild(deleteBtn);
                         
                         itemList.appendChild(li);
                                         }
                 })
                 .catch((err)=>console.log(err));
+        }
+        function deleteChild(id){
+            axios.delete("https://crudcrud.com/api/d842fed688bd4dd89571f20e13fa4743/data"+id)
+                .then((res) => {
+                    console.log(res);
+                    showNewUserOnScreen()});
         }
         showNewUserOnScreen();
       </script>
