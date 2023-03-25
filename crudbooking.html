@@ -68,6 +68,7 @@
                         var editBtn = document.createElement('button');
                         editBtn.className = 'btn btn-secondary btn-sm float-right'
                         editBtn.appendChild(document.createTextNode('edit'));
+                        editBtn.addEventListener('click',editChild(d))
                         li.appendChild(editBtn);
                         
                         var deleteBtn = document.createElement('button');
@@ -86,6 +87,17 @@
                 .then((res) => {
                     console.log(res);
                     showNewUserOnScreen()});
+        }
+        function editChild(id){
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const number = document.getElementById('phonenumber');
+
+            name.value = d.name;
+            email.value = d.email;
+            number.value = d.number;
+            deleteChild(d._id);
+            
         }
         showNewUserOnScreen();
       </script>
